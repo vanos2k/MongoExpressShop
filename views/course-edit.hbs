@@ -1,0 +1,35 @@
+<h1>Edit course page</h1>
+
+<div class="row">
+    <form class="col s12 course-form" method="POST" action="/courses/edit">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" name="title" type="text" class="validate" required value="{{course.title}}">
+                <label for="title">Course title</label>
+                <span class="helper-text" data-error="Type in title" ></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="price" name="price" type="number" class="validate" required min="1" value="{{course.price}}">
+                <label for="price">Price</label>
+                <span class="helper-text" data-error="Type in price"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="img" type="text" name="img" class="validate" required value="{{course.img}}">
+                <label for="img">Picture url</label>
+                <span class="helper-text" data-error="Type in image url"></span>
+            </div>
+        </div>
+        <input name="_csrf" type="hidden" value="{{csrf}}">
+        <input type="hidden" name="id" value="{{course.id}}">
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+    <form method="POST" action="/courses/delete">
+        <input name="_csrf" type="hidden" value="{{csrf}}">
+        <input type="hidden" name="id" value="{{course.id}}">
+        <button type="submit" class="btn red">Delete</button>
+    </form>
+</div>
