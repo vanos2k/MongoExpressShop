@@ -2,6 +2,26 @@
     <h3 class="title">{{course.title}}</h3>
 
     <img class="card-image" src="{{course.img}}" alt="{{course.title}}">
+    <div class="row">
+        <div class="col s6">
+            <p class="price">{{course.price}}</p>
+        </div>
+        <div class="col s6">
+            <label>Currency</label>
+            <select class="browser-default" data-csrf="{{@root.csrf}}" data-price="{{@root.course.price}}" data-currency="5f44148dfa372c910c0df75a" id="currency" onChange="currencyChange()" style="width: 200px">
+                <option value="" disabled selected>Choose your option</option>
+                {{#each currencyList}}
+                    <option value="{{id}}">{{shortTitle}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="col s12">
+            <form action="/cart/add" method="POST">
+                <input name="_csrf" type="hidden" value="rriMfCAO-kY5AXwiyGOWdpAypvvSdAEgXtvU">
+                <input type="hidden" name="id" value="5f04bb5ddb2ea665fc07995e">
+                <button type="submit" class="btn btn-danger">Buy</button>
+            </form>
+        </div>
+    </div>
 
-    <p class="price">{{course.price}}</p>
 </div>

@@ -1,6 +1,6 @@
-const toCurrency = price => {
+const toCurrency = (price, currency='rub') => {
     return new Intl.NumberFormat('ru-Ru', {
-        currency: 'rub',
+        currency: currency,
         style: 'currency'
     }).format(price);
 };
@@ -23,6 +23,39 @@ document.querySelectorAll('.price').forEach((node) => {
 document.querySelectorAll('.date').forEach((node) => {
     node.textContent = toDate(node.textContent);
 });
+
+// const $currency = document.querySelector('#currency');
+// if ($currency) {
+//     $currency.addEventListener('click', event => {
+//         console.log(event);
+//     })
+// }
+function currencyChange () {
+    const currencyList = document.getElementById('currency');
+    const data = currencyList.dataset;
+    const index = document.getElementById('currency').selectedIndex;
+    const csrf = data.csrf;
+    const currentCurrencyId = data.currency;
+    const coursePrice = data.price;
+    const chossedCurrency = currencyList[index];
+
+    if (chossedCurrency.value !== currentCurrencyId) {
+        fetch(`/currency?newCurrencyId=${chossedCurrency.value}&oldCurrencyId=${currentCurrencyId}&coursePrice=${coursePrice}`, {
+            method: 'POST',
+            headers: {
+                'X-XSRF-TOKEN': csrf
+            }
+        }).then(res => res.json())
+          .then(data => {
+              document.querySelectorAll('.price').forEach((node) => {
+                  node.textContent = toCurrency(data.convertedPrice, data.shortTitle);
+              });
+              currencyList.dataset.currency = data.newCurrencyId;
+              currencyList.dataset.price = data.convertedPrice;
+          })
+    }
+}
+
 
 const $card = document.querySelector('#cart');
 if ($card) {
@@ -61,3 +94,10 @@ if ($card) {
 }
 
 M.Tabs.init(document.querySelectorAll('.tabs'));
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('select');
+//     var instances = M.FormSelect.init(elems, options);
+// });
+

@@ -69,6 +69,7 @@ const cartRoutes = require('./routes/cart');
 const ordersRoutes = require('./routes/orders');
 const authRoutes = require('./routes/auth');
 const profileRoutes = require('./routes/profile');
+const currencyRoutes = require('./routes/currency');
 
 app.use('/', homeRoutes);
 app.use('/courses', coursesRoutes);
@@ -77,6 +78,7 @@ app.use('/cart', cartRoutes);
 app.use('/orders', ordersRoutes);
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
+app.use('/currency', currencyRoutes);
 app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 3000;
