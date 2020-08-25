@@ -89,16 +89,12 @@ router.post('/delete', isAuth, async (req, res) => {
 
 router.get('/:id', async (req, res, next) => {
     try {
-        const currency = new Currency({
-            title: 'Hryvnia',
-            shortTitle: 'HRN',
-            toUsd: 0.036
-        });
-        await currency.save();
+        const currencyList = await Currency.find();
         const course = await Course.findById(req.params.id);
         res.render('course', {
             title: `Course ${course.title}`,
-            course: course
+            course: course,
+            currencyList
         })
     } catch (e) {
         console.log(e);
