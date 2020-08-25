@@ -96,8 +96,5 @@ if ($card) {
 M.Tabs.init(document.querySelectorAll('.tabs'));
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('select');
-//     var instances = M.FormSelect.init(elems, options);
-// });
+
 

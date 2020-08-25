@@ -13,8 +13,6 @@ describe('Test the convertPrice method', () => {
             if (err) {
                 process.exit(1);
             }
-            testAUD = new Currency(testDataAUD);
-            testLEK = new Currency(testDataLEK);
         });
     });
 
