@@ -7,6 +7,7 @@
             <tr>
                 <th>Name</th>
                 <th>Quantity</th>
+                <th>Price</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -15,6 +16,7 @@
                 <tr>
                     <td>{{title}}</td>
                     <td>{{count}}</td>
+                    <td class="price">{{price}}</td>
                     <td>
                         <button class="btn btn-small js-remove" data-id="{{id}}" data-csrf="{{@root.csrf}}">Delete</button>
                     </td>

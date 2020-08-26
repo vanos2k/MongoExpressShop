@@ -1,5 +1,6 @@
 const {Router} = require('express');
 const Course = require('../models/course');
+const Discount = require('../models/discount');
 
 const router = Router();
 const isAuth = require('../middleware/authChecker');
@@ -7,6 +8,7 @@ const isAuth = require('../middleware/authChecker');
 function mapCartItems (cart) {
     return cart.items.map(c => ({
         ...c.courseId._doc,
+        price: c.price,
         id: c.courseId.id,
         count: c.count
     }));
@@ -49,7 +51,8 @@ router.delete('/remove/:id', isAuth, async (req, res) => {
 });
 
 router.post('/add', isAuth, async (req, res) => {
-    const course = await Course.findById(req.body.id);
+    let course = await Course.findById(req.body.id);
+    course = await Discount.discountCounter(course);
     await req.user.addToCart(course);
     res.redirect('/cart');
 });

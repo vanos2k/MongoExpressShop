@@ -2,10 +2,10 @@ const Currency = require('../models/currency');
 const {MONGO_URI} = require('../keys/configuration');
 const mongoose = require('mongoose');
 
-const testDataAUD = {'title': 'TestCurrencyOne', 'shortTitle': 'AUD', toUsd: 0.72};
-const testDataLEK = {'title': 'TestCurrencyTwo', shortTitle: 'LEK', toUsd: 0.0095};
+const testDataAUD = {title: 'TestCurrencyOne', shortTitle: 'AUD', toUsd: 0.72};
+const testDataLEK = {title: 'TestCurrencyTwo', shortTitle: 'LEK', toUsd: 0.0095};
 
-describe('Test the convertPrice method', () => {
+describe('Test the currency model', () => {
 
     //configuration
     beforeAll(async () => {
@@ -13,8 +13,6 @@ describe('Test the convertPrice method', () => {
             if (err) {
                 process.exit(1);
             }
-            testAUD = new Currency(testDataAUD);
-            testLEK = new Currency(testDataLEK);
         });
     });
 
@@ -40,7 +38,7 @@ describe('Test the convertPrice method', () => {
     });
 
 
-    it('test convertPrice function', async () => {
+    it('test convertPrice method', async () => {
         const testAUD = new Currency(testDataAUD);
         await testAUD.save();
         const testLEK = new Currency(testDataLEK);
