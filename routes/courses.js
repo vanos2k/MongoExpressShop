@@ -15,12 +15,19 @@ function isOwner(course, req) {
 router.get('/', async (req, res) => {
     try {
         const courses = await Course.find().populate('userId', 'email name');
-        res.render('courses', {
-            title: 'Courses',
-            isCourses: true,
-            userId: req.user ? req.user._id.toString() : null,
-            courses
+        const updatedCourses = courses.map(async course => {
+            return await Discount.discountCounter(course);
         });
+        Promise
+            .all(updatedCourses)
+            .then(courses => {
+                res.render('courses', {
+                    title: 'Courses',
+                    isCourses: true,
+                    userId: req.user ? req.user._id.toString() : null,
+                    courses
+                });
+            });
     } catch (e) {
         console.log(e);
     }
@@ -94,7 +101,7 @@ router.get('/:id', async (req, res, next) => {
         const course = await Course.findById(req.params.id);
         // const discount = new Discount({courseId: '5f0c6c213b223938f809383b', percent: 10, type: 2, hourseFrom: '13:00', hourseTo: '20:00'});
         // await discount.save();
-        const updatedCourse = await Discount.discountDistributor(course);
+        const updatedCourse = await Discount.discountCounter(course);
 
         res.render('course', {
             title: `Course ${course.title}`,

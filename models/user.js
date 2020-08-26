@@ -19,6 +19,10 @@ const userSchema = new Schema({
     cart: {
         items: [
             {
+                price: {
+                    type: Number,
+                    required: true,
+                },
                 count: {
                     type: Number,
                     required: true,
@@ -37,12 +41,14 @@ const userSchema = new Schema({
 userSchema.methods.addToCart = function (course) {
     const items = [...this.cart.items];
 
-    const idx = items.findIndex(c => c.courseId.toString() === course._id.toString());
+    const idx = items.findIndex(c => c.courseId.toString() === course._id.toString() && c.price === course.price);
 
     if (idx >= 0) {
         items[idx].count = items[idx].count + 1;
     } else {
+        console.log(course.price);
         items.push({
+            price: course.price,
             count: 1,
             courseId: course._id
         });

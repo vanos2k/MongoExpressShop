@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2252df54-fa59-45dc-a3d2-67907a869425" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/discount.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/currency.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/currency.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/discount.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/discount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/courses.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/currency.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/currency.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cart.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cart.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/course.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/course.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,26 +27,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/discount.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="-376">
+              <caret line="50" column="32" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/courses.js">
+        <entry file="file://$PROJECT_DIR$/routes/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+            <state relative-caret-position="-70">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <marker date="1598439387431" expanded="true" signature="559:842" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/course.hbs">
+        <entry file="file://$PROJECT_DIR$/tests/discount.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="1938">
+              <caret line="114" column="48" lean-forward="true" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/currency.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-478">
+              <caret selection-end-line="2" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -51,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/currency.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="255">
               <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
             </state>
           </provider>
@@ -85,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/course.js" />
         <option value="$PROJECT_DIR$/data/courses.json" />
         <option value="$PROJECT_DIR$/data/card.json" />
         <option value="$PROJECT_DIR$/models/cart.js" />
@@ -95,13 +118,11 @@
         <option value="$PROJECT_DIR$/models/order.js" />
         <option value="$PROJECT_DIR$/views/orders.js" />
         <option value="$PROJECT_DIR$/views/orders.hbs" />
-        <option value="$PROJECT_DIR$/routes/cart.js" />
         <option value="$PROJECT_DIR$/routes/orders.js" />
         <option value="$PROJECT_DIR$/middleware/authChecker.js" />
         <option value="$PROJECT_DIR$/middleware/user.js" />
         <option value="$PROJECT_DIR$/middleware/variables.js" />
         <option value="$PROJECT_DIR$/views/course-edit.hbs" />
-        <option value="$PROJECT_DIR$/views/cart.hbs" />
         <option value="$PROJECT_DIR$/email/registration.js" />
         <option value="$PROJECT_DIR$/views/auth/login.hbs" />
         <option value="$PROJECT_DIR$/views/auth/reset.hbs" />
@@ -116,7 +137,6 @@
         <option value="$PROJECT_DIR$/views/404.hbs" />
         <option value="$PROJECT_DIR$/views/partials/navbar.hbs" />
         <option value="$PROJECT_DIR$/public/index.css" />
-        <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/views/profile.hbs" />
         <option value="$PROJECT_DIR$/middleware/file.js" />
         <option value="$PROJECT_DIR$/routes/profile.js" />
@@ -131,11 +151,15 @@
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/public/app.js" />
         <option value="$PROJECT_DIR$/models/discountType.js" />
-        <option value="$PROJECT_DIR$/tests/currency.test.js" />
         <option value="$PROJECT_DIR$/models/currency.js" />
-        <option value="$PROJECT_DIR$/models/discount.js" />
-        <option value="$PROJECT_DIR$/routes/courses.js" />
         <option value="$PROJECT_DIR$/views/course.hbs" />
+        <option value="$PROJECT_DIR$/models/user.js" />
+        <option value="$PROJECT_DIR$/routes/cart.js" />
+        <option value="$PROJECT_DIR$/views/cart.hbs" />
+        <option value="$PROJECT_DIR$/tests/currency.test.js" />
+        <option value="$PROJECT_DIR$/routes/courses.js" />
+        <option value="$PROJECT_DIR$/models/discount.js" />
+        <option value="$PROJECT_DIR$/tests/discount.test.js" />
       </list>
     </option>
   </component>
@@ -173,6 +197,11 @@
               <item name="node-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-express" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="node-express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node-express" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="node-express" type="b2602c69:ProjectViewProjectNode" />
@@ -235,12 +264,12 @@
       <workItem from="1595968715764" duration="21261000" />
       <workItem from="1596385824369" duration="25930000" />
       <workItem from="1596723088191" duration="29110000" />
-      <workItem from="1597401849789" duration="44251000" />
+      <workItem from="1597401849789" duration="53041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203225000" />
+    <option name="totallyTimeSpent" value="212015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -255,7 +284,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14837153" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14837153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -269,7 +298,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5012063" side_tool="true" weight="0.32026875" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49879372" visible="true" weight="0.32026875" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49879372" visible="true" weight="0.32026875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -299,13 +328,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/connect-mongodb-session/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/course.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -548,23 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cart.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding>
-            <marker date="1594829794194" expanded="true" signature="487:770" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -596,33 +601,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/currency.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/discountType.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/currency.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="64" lean-forward="true" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
+        <state relative-caret-position="425">
           <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
           <folding>
             <marker date="1598358080303" expanded="true" signature="670:844" ph="..." />
@@ -630,31 +614,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/currency.js">
+    <entry file="file://$PROJECT_DIR$/views/course.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="340">
+          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/discount.js">
+    <entry file="file://$PROJECT_DIR$/views/cart.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="306">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/currency.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="110" selection-start-line="6" selection-start-column="110" selection-end-line="6" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/currency.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/courses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        <state relative-caret-position="153">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/course.hbs">
+    <entry file="file://$PROJECT_DIR$/tests/currency.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="-478">
+          <caret selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1598439387431" expanded="true" signature="559:842" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/discount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-376">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/discount.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="48" lean-forward="true" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
         </state>
       </provider>
     </entry>

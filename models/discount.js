@@ -15,10 +15,10 @@ const Discount = Schema({
     day: {
         type: Number
     },
-    hourseFrom: {
+    hoursFrom: {
         type: String
     },
-    hourseTo: {
+    hoursTo: {
         type: String
     }
 });
@@ -48,9 +48,9 @@ const Discount = Schema({
 // type [0=course discount, 1=discount by day]
 
 
-Discount.statics.discountDistributor = async function (course) {
+Discount.statics.discountCounter = async function (course) {
     const courseDiscounts = await this.find({courseId: course._id});
-    Object.assign(course, {priceWithDiscount: course.price});
+    // Object.assign(course, {priceWithDiscount: course.price});
     courseDiscounts.forEach(discount => {
         switch (discount.type) {
             case 0:
@@ -82,7 +82,7 @@ Discount.methods.HourDiscount = function (course) {
     const currentDate = new Date(Date.now());
     const currentTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
 
-    if (currentTime >= this.hourseFrom && currentTime <= this.hourseTo) {
+    if (currentTime >= this.hoursFrom && currentTime <= this.hoursTo) {
         return this.applyDiscount(course);
     }
     return course;
@@ -93,7 +93,7 @@ Discount.methods.HourDiscount = function (course) {
  * @returns {*} // updated course price by discount
  */
 Discount.methods.applyDiscount = function (course) {
-    course.priceWithDiscount = course.priceWithDiscount - (course.priceWithDiscount * this.percent / 100);
+    course.price = course.price - (course.price * this.percent / 100);
     return course;
 };
 
